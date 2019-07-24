@@ -19,14 +19,19 @@ const htmlRep = (favItemValue, placeToPurchaseValue) => {
 
 document.querySelector("#saveEntry").addEventListener("click", () => {
     // get the data
-    const favItemValue = document.querySelector("#favItem").value
-    const placeToPurchaseValue = document.querySelector("#placeToPurchase").value
+    const favItemValue = document.querySelector("#favItem")
+    const placeToPurchaseValue = document.querySelector("#placeToPurchase")
     // we need to call it in our function for the event listener
-    const ItemPlaceList = htmlRep(favItemValue, placeToPurchaseValue)
+    const ItemPlaceList = htmlRep(favItemValue.value, placeToPurchaseValue.value)
     console.log(ItemPlaceList)
     
     // add the htmlrep to the dom
     inputContainer.innerHTML += ItemPlaceList
-    
+    favItemValue.value="";
+    placeToPurchaseValue.value="";
 })
+
+// function myFunction() {
+//     favItemValue = "";
+// }
 
