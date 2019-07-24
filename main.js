@@ -27,11 +27,21 @@ document.querySelector("#saveEntry").addEventListener("click", () => {
     
     // add the htmlrep to the dom
     inputContainer.innerHTML += ItemPlaceList
+
+    if (favItemValue.value === "" || placeToPurchaseValue.value === "") {
+        inputContainer.innerHTML = ""
+        alert("Please enter information in both input fields")
+    }
+    // replace the input in the form to empty string once the button is clicked
     favItemValue.value="";
     placeToPurchaseValue.value="";
+
+    // if (favItemValue.value === !"" && placeToPurchaseValue.value === !"") {
+    //     alert("you did not type anything")
+    // }
+    // else (favItemValue.value === !"" || placeToPurchaseValue.value === !"")
+
 })
 
-// function myFunction() {
-//     favItemValue = "";
-// }
+
 
